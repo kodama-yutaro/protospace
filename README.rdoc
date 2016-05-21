@@ -1,70 +1,67 @@
 == README
 
-##products table 
-###association 
-* product belongs_to :user  
-* product has_many   :comments  
-* product has_many   :images  
-* product has_many   :likes  
+##association  
 
-###column   
-* t.integer :id  
-* t.references :user_id  
-* t.string :name  
-* t.text :text  
-* t.text :concept  
-* t.text :catch_copy  
-* t.timestamps  
+product belongs_to :user  
+product has_many   :comments  
+product has_many   :images  
+product has_many   :likes  
+user    has_many   :products  
+user    has_many   :comments  
+user    has_many   :likes  
+comment belongs_to :user  
+comment has_many   :tweets  
+image   belongs_to :product  
+like    belongs_to :user  
+like    belongs_to :product  
 
-##users table 
-###association  
-* user    has_many   :products  
-* user    has_many   :comments  
-* user    has_many   :likes   
+##table  
 
-###column  
-* t.integer :id  
-* t.string :avatar 
-* t.string :nickname  
-* t.string :title  
-* t.text :profile  
-* t.text :work  
-* t.timestamps  
+*products  
+*users  
+*comments  
+*images  
+*likes  
 
-##comments table 
-###association  
-* comment belongs_to :user  
-* comment belongs_to :product  
+##column  
+###products_table  
+t.integer :id  
+t.references :user_id  
+t.string :name  
+t.text :text  
+t.text :concept  
+t.text :catch_copy  
+t.timestamps  
 
-###column  
-* t.integer :id  
-* t.references :user_id  
-* t.references :product_id  
-* t.text :text  
-* t.timestamps  
+###users_table  
+t.integer :id  
+t.string :avatar_file_name  
+t.string :avatar_content_type  
+t.integer :avatar_file_size  
+t.string :nickname  
+t.string :title  
+t.text :profile  
+t.text :work  
+t.timestamps  
 
-##product_images table  
-###association 
-* product_image   belongs_to :product  
+###comments_table  
+t.integer :id  
+t.references :user_id  
+t.references :tweet_id  
+t.text :text  
+t.timestamps  
 
-###column  
-* t.integer :id  
-* t.text :image_url 
-* t.references :product_id  
-* t.timestamps  
+###images_table  
+t.integer :id  
+t.text :name  
+t.references :product_id  
+t.timestamps  
 
-##likes table 
- 
-###association 
-* like    belongs_to :user  
-* like    belongs_to :product  
-
-###column  
-* t.integer :id  
-* t.references :user_id  
-* t.references :product_id  
-* t.timestamps  
-
+###likes_table  
+t.integer :id  
+t.references :user_id  
+t.references :product_id  
+t.timestamps  
 
 
 
