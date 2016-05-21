@@ -1,6 +1,6 @@
 == README
 
-##association  
+## association  
 
 product belongs_to :user  
 product has_many   :comments  
@@ -15,7 +15,7 @@ image   belongs_to :product
 like    belongs_to :user  
 like    belongs_to :product  
 
-##table  
+## table  
 
 *products  
 *users  
@@ -23,8 +23,8 @@ like    belongs_to :product
 *images  
 *likes  
 
-##column  
-###products_table  
+## column  
+### products_table  
 t.integer :id  
 t.references :user_id  
 t.string :name  
@@ -33,7 +33,7 @@ t.text :concept
 t.text :catch_copy  
 t.timestamps  
 
-###users_table  
+### users_table  
 t.integer :id  
 t.string :avatar_file_name  
 t.string :avatar_content_type  
@@ -44,20 +44,20 @@ t.text :profile
 t.text :work  
 t.timestamps  
 
-###comments_table  
+### comments_table  
 t.integer :id  
 t.references :user_id  
 t.references :tweet_id  
 t.text :text  
 t.timestamps  
 
-###images_table  
+### images_table  
 t.integer :id  
 t.text :name  
 t.references :product_id  
 t.timestamps  
 
-###likes_table  
+### likes_table  
 t.integer :id  
 t.references :user_id  
 t.references :product_id  
