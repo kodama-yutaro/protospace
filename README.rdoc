@@ -1,28 +1,68 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##association  
 
-Things you may want to cover:
+product belongs_to :user  
+product has_many   :comments  
+product has_many   :images  
+product has_many   :likes  
+user    has_many   :products  
+user    has_many   :comments  
+user    has_many   :likes  
+comment belongs_to :user  
+comment has_many   :tweets  
+image   belongs_to :product  
+like    belongs_to :user  
+like    belongs_to :product  
 
-* Ruby version
+##table  
 
-* System dependencies
+*products  
+*users  
+*comments  
+*images  
+*likes  
 
-* Configuration
+##column  
+###products_table  
+t.integer :id  
+t.references :user_id  
+t.string :name  
+t.text :text  
+t.text :concept  
+t.text :catch_copy  
+t.timestamps  
 
-* Database creation
+###users_table  
+t.integer :id  
+t.string :avatar_file_name  
+t.string :avatar_content_type  
+t.integer :avatar_file_size  
+t.string :nickname  
+t.string :title  
+t.text :profile  
+t.text :work  
+t.timestamps  
 
-* Database initialization
+###comments_table  
+t.integer :id  
+t.references :user_id  
+t.references :tweet_id  
+t.text :text  
+t.timestamps  
 
-* How to run the test suite
+###images_table  
+t.integer :id  
+t.text :name  
+t.references :product_id  
+t.timestamps  
 
-* Services (job queues, cache servers, search engines, etc.)
+###likes_table  
+t.integer :id  
+t.references :user_id  
+t.references :product_id  
+t.timestamps  
 
-* Deployment instructions
-
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
