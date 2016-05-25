@@ -6,14 +6,14 @@
 
 * product belongs_to :user  
 * product has_many   :comments  
-* product has_many   :images  
+* product has_many   :product_images  
 * product has_many   :likes  
 
 ### column  
 
 * t.integer :id  
 * t.references :user_id  
-* t.string :name  
+* t.string :title  
 * t.text :text  
 * t.text :concept  
 * t.text :catch_copy  
@@ -23,9 +23,9 @@
 
 ### association  
 
-* user    has_many   :products  
-* user    has_many   :comments  
-* user    has_many   :likes   
+* user has_many :products  
+* user has_many :comments  
+* user has_many :likes   
 
 ### column  
 
@@ -56,20 +56,21 @@
 
 ### association  
 
-* product_image   belongs_to :product  
+* product_image belongs_to :product  
 
 ### column  
 
 * t.integer :id  
-* t.text :image_url  
+* t.text :image  
+* t.integer :status  
 * t.references :product_id  
 * t.timestamps  
 
 ## likes table  
   
 ### association  
-* like    belongs_to :user  
-* like    belongs_to :product  
+* like belongs_to :user  
+* like belongs_to :product  
 
 ### column  
 * t.integer :id  
