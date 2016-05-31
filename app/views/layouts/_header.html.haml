@@ -7,27 +7,26 @@
     = link_to "/", class: "navbar-brand" do
       = image_tag("logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "36px")
     .navbar-collapse.collapse.navbar-responsive-collapse
-       //login
-       - if user_signed_in?
-         %ul.nav.navbar-nav.navbar-right
-           %li.dropdown
-             = link_to "#", class: "dropdown-toggle", aria: {expanded: "false"}, data: {toggle: "dropdown"}, role: "button" do
-               UserName
-               %span.caret
-             %ul.dropdown-menu{role: "menu"}
-               %li
-                 = link_to "Profile Edit", "#"
-               %li
-                 = link_to "Logout", "#"
-           %li
-             .btn.btn-primary.navbar-btn
-             = button_tag class: "btn-primary navbar-btn"  do
-               = link_to "/proto/new" do
-                 New Proto
-       //not login
-       - else
-         %ul.nav.navbar-nav.navbar-right
-           %li
+    - if false
+      - if user_signed_in?
+        %ul.nav.navbar-nav.navbar-right
+          %li.dropdown
+            = link_to "#", class: "dropdown-toggle", aria: {expanded: "false"}, data: {toggle: "dropdown"}, role: "button" do
+              UserName
+              %span.caret
+            %ul.dropdown-menu{role: "menu"}
+              %li
+                = link_to "Profile Edit", "#"
+              %li
+                = link_to "Logout", "#"
+          %li
+            .btn.btn-primary.navbar-btn
+            = button_tag class: "btn-primary navbar-btn"  do
+              = link_to "/proto/new" do
+                New Proto
+      - else
+        %ul.nav.navbar-nav.navbar-right
+          %li
             = button_tag class: "btn-primary navbar-btn"  do
               = link_to "/login" do
-                 Get Started
+                Get Started
