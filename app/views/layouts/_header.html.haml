@@ -17,10 +17,9 @@
               %li
                 = link_to "Profile Edit", "#"
               %li
-                = link_to "Logout", "#"
+                = link_to("Logout", destroy_user_session_path, method: :delete)
           %li
             .btn.btn-primary.navbar-btn
-            = button_tag class: "btn-primary navbar-btn"  do
               = link_to "/proto/new" do
                 New Proto
       - else

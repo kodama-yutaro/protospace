@@ -3,9 +3,9 @@
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
       %h2.form-signin-heading Please sign in
       = f.label :email, "Email address", for: "inputEmail", class: "sr-only"
-      = f.text_field :email, autofocus: "", placeholder: "Email address", required: "", id: "inputEmail", class: "form-control"
+      = f.email_field :email, autofocus: "", placeholder: "Email address", required: "", id: "inputEmail", class: "form-control"
       = f.label :password, "Password", for: "inputPassword", class: "sr-only"
-      = f.text_field :password, placeholder: "Password", required: "", id: "inputPassword", class: "form-control"
+      = f.password_field :password, placeholder: "Password", required: "", id: "inputPassword", class: "form-control"
       .checkbox
         %label
         %input{ type: "checkbox", value: "remember-me" }/

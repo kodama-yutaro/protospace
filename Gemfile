@@ -36,6 +36,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'erb2haml'
 
+gem 'pry-rails'
 # bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 
