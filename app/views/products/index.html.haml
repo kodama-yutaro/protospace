@@ -6,9 +6,9 @@
   .container
     .row
       %ul.nav.nav-pills.col-lg-11
-        %li.active{role: "presentation"}
+        %li.active{ role: "presentation" }
           = link_to "Popular PROTO", "#"
-        %li{role: "presentation"}
+        %li{ role: "presentation" }
           = link_to "Newest PROTO", "#"
       = button_tag "View Tags", type: "button", class: "btn btn-default col-lg-1"
 
@@ -152,7 +152,7 @@
 .text-center
   %ul.pagination
     %li.disabled
-      = link_to "#", aria: {label: "Previous"} do
+      = link_to "#", aria: { label: "Previous" } do
         %span{"aria-hidden" => "true"} «
     %li.active
       = link_to "1","#"
@@ -166,5 +166,5 @@
     %li
       = link_to "5","#"
     %li
-      = link_to "#", aria: {label: "Next"} do
-        %span{"aria-hidden" => "true"} »
+      = link_to "#", aria: { label: "Next" } do
+        %span{ "aria-hidden" => "true" } »
