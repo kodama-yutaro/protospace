@@ -8,8 +8,14 @@ class ProductsController < ApplicationController
   end
 
   def create
-    Product.create(product_params)
-    redirect_to products_path
+    current_user.products.create(product_params)
+
+    if current_user.products.create
+      redirect_to products_path, notice: 'プロトタイプを投稿しました。'
+    else
+      render :new
+    end
+
   end
 
   private
@@ -19,6 +25,6 @@ class ProductsController < ApplicationController
       :concept,
       :catch_copy,
       product_images_attributes: [:image, :status]
-    ).merge(user_id: current_user.id)
+    )
   end
 end
