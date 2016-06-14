@@ -1,6 +1,13 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
+   version :thumb_300 do
+     process :resize_to_fit => [300, 300]
+   end
+
+   version :small_thumb, :from_version => :thumb do
+     process resize_to_fill: [20, 20]
+   end
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -17,7 +24,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-      "/images/fallback/" + [version_name, "default.png"].compact.join('_')
+      # For Rails 3.1+ asset pipeline compatibility:
+      # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
+      'noimage.png'
    end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
