@@ -1,13 +1,6 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
-   version :thumb_300 do
-     process :resize_to_fit => [300, 300]
-   end
-
-   version :small_thumb, :from_version => :thumb do
-     process resize_to_fill: [20, 20]
-   end
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
