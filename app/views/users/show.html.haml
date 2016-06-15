@@ -22,7 +22,7 @@
             %h4 Works
             %p
               = @user.work
-= render partial: "products/product"
+= render partial: "products/product", locals: { products: @products }
 .text-center
   %ul.pagination
     %li.disabled

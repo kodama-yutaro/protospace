@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
   has_many :products
   has_many :comments
   has_many :likes
-  mount_uploader :avatar, ImageUploader
+  mount_uploader :avatar, AvatarUploader
 end

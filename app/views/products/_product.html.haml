@@ -2,17 +2,17 @@
   .row
     .col-sm-4.col-md-3.proto-content
       .thumbnail
-        - @products.each do |product|
+        - products.each do |product|
           = link_to product_path(product) do
             = image_tag(product.product_images.main.first.image)
             = image_tag(product.product_images.sub.first.image)
             = image_tag(product.product_images.sub.second.image)
             .caption
-              %h3 #{product.title}
+              %h3 #{ product.title }
               .proto-meta
                 .proto-user
                   = link_to user_path(product.user) do
-                    by #{product.user.nickname}
+                    by #{ product.user.nickname }
                 .proto-posted
                   #{product.created_at}
               %ul.proto-tag-list.list-inline
