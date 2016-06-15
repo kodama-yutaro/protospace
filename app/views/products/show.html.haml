@@ -2,15 +2,15 @@
   %header.row.user-nav
     .col-md-6
       .media
-        / .media-left
-        /   = link_to "#" do
-        /     = image_tag( alt: "64x64", "data-holder-rendered": "true", "data-src": "holder.js/64x64", src: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEzLjQ2MDkzNzUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==", style: "width: 64px; height: 64px;", class: "media-object" )
-      .media-body
-        %h4#top-aligned-media.media-heading
-          Top aligned media
-        .proto-user
-          = link_to "by user", "#"
-          %span.degree we-b inc. Designer
+        .media-left
+          = link_to user_path(@user) do
+            = image_tag(@user.avatar, style: "width: 64px; height: 64px;", class: "media-object", alt: "64x64")
+        .media-body
+          %h4#top-aligned-media.media-heading
+            #{@product.title}
+          .proto-user
+            = link_to "by #{@user.nickname}", user_path(@user)
+            %span.degree #{@user.member} #{@user.work}
     .col-md-6.text-right
       = button_tag class: "btn btn-default" do
         = image_tag("icon_heart.svg")
@@ -26,14 +26,14 @@
         %li.list-group-item
           = image_tag(@product.product_images.sub.second.image, class: 'img-responsive')
         %li.list-group-item
-          = image_tag(@product.product_images.sub.second.image, class: 'img-responsive')
+          = image_tag(@product.product_images.sub.third.image, class: 'img-responsive')
   .row.proto-description
     .col-md-3
       %h4 Catch Copy
-      %p Type something
+      %p #{@product.catch_copy}
     .col-md-6
       %h4 Concept
-      %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis
+      %p #{@product.concept}
     .col-md-3
       %h4 Tag List
       %ul.proto-tag-list.list-inline
