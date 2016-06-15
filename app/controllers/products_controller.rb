@@ -9,9 +9,9 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = current_user.products.new(product_params)
+    current_user.products.create(product_params)
 
-    if @product.save
+    if current_user.products.create
       redirect_to products_path, notice: 'プロトタイプを投稿しました。'
     else
       render :new
@@ -21,7 +21,6 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    @user = @product.user
   end
 
   private
