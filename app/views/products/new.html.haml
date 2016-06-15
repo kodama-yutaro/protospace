@@ -23,8 +23,8 @@
                 .image-upload-plus
                   %span +
                   = f.fields_for :product_images do |image_form|
-                      = image_form.file_field :image
-                      = image_form.hidden_field :status, value: :sub
+                    = image_form.file_field :image
+                    = image_form.hidden_field :status, value: :sub
       .row.proto-description
         .col-md-12
           = f.text_field :catch_copy, placeholder: "Catch Copy"

@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
   def create
     @product = current_user.products.new(product_params)
 
-    if @product.new
+    if @product.save
       redirect_to products_path, notice: 'プロトタイプを投稿しました。'
     else
       render :new
