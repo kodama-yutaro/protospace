@@ -30,16 +30,13 @@ class ProductsController < ApplicationController
   end
 
   def update
-    if @product.user_id == current_user.id
-      @product.update(product_params)
-    end
+    binding.pry
+    @product.update(product_params) if @product.user_id == current_user.id
     redirect_to products_path, notice: 'プロトタイプを更新しました。'
   end
 
   def destroy
-    if @product.user_id == current_user.id
-      @product.destroy
-    end
+    @product.destroy if @product.user_id == current_user.id
     redirect_to products_path, notice: 'プロトタイプを削除しました。'
   end
 
