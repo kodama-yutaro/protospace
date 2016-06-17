@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+
   def index
     @products = Product.all
   end
@@ -20,8 +23,24 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
     @user = @product.user
+  end
+
+  def edit
+  end
+
+  def update
+    if @product.user_id == current_user.id
+      @product.update(product_params)
+    end
+    redirect_to products_path, notice: 'プロトタイプを更新しました。'
+  end
+
+  def destroy
+    if @product.user_id == current_user.id
+      @product.destroy
+    end
+    redirect_to products_path, notice: 'プロトタイプを削除しました。'
   end
 
   private
@@ -30,7 +49,11 @@ class ProductsController < ApplicationController
       :title,
       :concept,
       :catch_copy,
-      product_images_attributes: [:image, :status]
+      product_images_attributes: [:image, :status, :id]
     )
+  end
+
+  def set_product
+    @product = Product.find(params[:id])
   end
 end

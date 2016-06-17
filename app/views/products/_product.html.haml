@@ -1,8 +1,16 @@
 .container.proto-list
   .row
     .col-sm-4.col-md-3.proto-content
-      .thumbnail
-        - products.each do |product|
+      - products.each do |product|
+        - if user_signed_in? && product.user_id == current_user.id
+          .dropdown
+            = button_tag "ACTION", type: "button", class: "btn btn-default dropdown_toggle", id: "dropdownMenu1", data: { toggle: "dropdown" }
+            %ul.dropdown-menu{ role: "menu", aria: { labelledby: "dropdownMenu1" }}
+              %li{ role: "presentation" }
+                = link_to 'Edit', edit_product_path(product), method: :get, role: "menuitem", tabindex: "-1"
+              %li{ role: "presentation" }
+                = link_to 'Delete', "/products/#{product.id}", method: :delete, role: "menuitem", tabindex: "-1"
+        .thumbnail
           = link_to product_path(product) do
             = image_tag(product.product_images.main.first.image)
             = image_tag(product.product_images.sub.first.image)
