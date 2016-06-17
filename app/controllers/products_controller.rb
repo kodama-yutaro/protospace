@@ -30,9 +30,12 @@ class ProductsController < ApplicationController
   end
 
   def update
-    binding.pry
     @product.update(product_params) if @product.user_id == current_user.id
-    redirect_to products_path, notice: 'プロトタイプを更新しました。'
+    if @product.save
+      redirect_to products_path, notice: 'プロトタイプを更新しました。'
+    else
+      render :edit, notice: 'プロトタイプの更新に失敗しました。'
+    end
   end
 
   def destroy
