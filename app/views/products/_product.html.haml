@@ -1,7 +1,7 @@
 .container.proto-list
   .row
-    .col-sm-4.col-md-3.proto-content
-      - products.each do |product|
+    - products.each do |product|
+      .col-sm-4.col-md-3.proto-content
         - if user_signed_in? && product.user_id == current_user.id
           .dropdown
             = button_tag "ACTION", type: "button", class: "btn btn-default dropdown_toggle", id: "dropdownMenu1", data: { toggle: "dropdown" }
@@ -13,8 +13,6 @@
         .thumbnail
           = link_to product_path(product) do
             = image_tag(product.product_images.main.first.image)
-            = image_tag(product.product_images.sub.first.image)
-            = image_tag(product.product_images.sub.second.image)
             .caption
               %h3 #{ product.title }
               .proto-meta
