@@ -24,6 +24,7 @@ class ProductsController < ApplicationController
 
   def show
     @user = @product.user
+    @like = @product.likes.find_by(user_id: current_user.id)
   end
 
   def edit

@@ -11,3 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
+*.png
+*.svg
+*.jpg
+*.jpeg
+*.gif
