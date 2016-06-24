@@ -25,6 +25,8 @@ class ProductsController < ApplicationController
   def show
     @user = @product.user
     @like = @product.likes.find_by(user_id: current_user.id)
+    @comment = Comment.new
+    @comments = Comment.all
   end
 
   def edit

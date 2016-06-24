@@ -1,0 +1,14 @@
+.row.proto-comments
+  %h4.col-md-12
+    Comments
+    %span.num (#{ @comments.count })
+  - @comments.each do |comment|
+    .col-md-8
+      .media
+        .media-left
+          = link_to user_path(comment.user) do
+            = image_tag(comment.user.avatar, style: "width: 64px; height: 64px;", class: "media-object", alt: "64x64")
+        .media-body
+          #{ comment.user.nickname }
+          %h4#top-aligned-media.media-heading
+          %p #{ comment.text }

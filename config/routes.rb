@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'products#index'
   resources :products do
     resources :likes, only: [:create, :destroy]
+    resources :comments
   end
   resources :users , only: [:show, :edit, :update]
 end
