@@ -1,0 +1,18 @@
+- if user_signed_in?
+  - if @product.like_user(current_user)
+    = button_to product_like_path(@product, @like), method: :delete,id: "like-button", class: "btn btn-default", remote: true do
+      = image_tag("icon_heart_red.svg")
+      LIKE
+      %span#like-sum.num
+        = @product.likes_count
+  - else
+    = button_to product_likes_path(@product), id: "like-button",class: "btn btn-default", remote: true do
+      = image_tag("icon_heart.svg")
+      LIKE
+      %span#like-sum.num
+        = @product.likes_count
+- else
+  = image_tag("icon_heart.svg")
+  LIKE
+  %span#like-sum
+    = @product.likes_count

@@ -12,10 +12,8 @@
             = link_to "by #{@user.nickname}", user_path(@user)
             %span.degree #{@user.member} #{@user.work}
     .col-md-6.text-right
-      = button_tag class: "btn btn-default" do
-        = image_tag("icon_heart.svg")
-        Like
-        %span.num 20
+      #like-button
+        = render partial: 'likes/like'
   .row
     .col-md-9
       = image_tag(@product.product_images.main.first.image, class: 'img-responsive')
