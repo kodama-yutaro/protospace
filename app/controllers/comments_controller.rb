@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(user_id: current_user.id, product_id: params[:product_id], text: comment_params[:text])
-    @comments = Comment.all
+    @comments = @comments = Comment.where(product_id: @product.id)
     @product.reload
   end
 
