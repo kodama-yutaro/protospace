@@ -3,9 +3,9 @@ class CommentsController < ApplicationController
   before_action :set_product
 
   def create
-    @comment = Comment.create(user_id: current_user.id, product_id: params[:product_id], text: comment_params[:text])
-    @comments = @comments = Comment.where(product_id: @product.id)
+    @comment = current_user.comments.create(comment_params)
     @product.reload
+    @comments = @product.comments.includes(:user)
   end
 
   private
@@ -14,6 +14,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:text)
+    params.require(:comment).permit(:text).merge(product_id: params[:product_id])
   end
 end
