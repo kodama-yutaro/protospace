@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.all
+    @products = Product.all.includes(:user)
   end
 
   def new
@@ -25,6 +25,8 @@ class ProductsController < ApplicationController
   def show
     @user = @product.user
     @like = @product.likes.find_by(user_id: current_user.id)
+    @comment = Comment.new
+    @comments = Comment.where(product_id: @product.id)
   end
 
   def edit

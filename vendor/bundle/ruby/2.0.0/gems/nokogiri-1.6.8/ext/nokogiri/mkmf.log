@@ -1,0 +1,306 @@
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib   -arch x86_64 -arch i386   -lruby.2.0.0  -lpthread -ldl -lobjc  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"xcrun clang -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS   -arch x86_64 -arch i386  -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"xcrun clang -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -Wno-error=unused-command-line-argument-hard-error-in-future  -arch x86_64 -arch i386  -c conftest.c"
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+1 warning generated.
+warning: unknown warning option '-Werror=unused-command-line-argument-hard-error-in-future'; did you mean '-Werror=unused-command-line-argument'? [-Wunknown-warning-option]
+1 warning generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib   -arch x86_64 -arch i386   -lruby.2.0.0 -L/usr/local/Cellar/libxml2/2.9.3/lib -lxml2 -lpthread -ldl -lobjc  "
+ld: warning: ignoring file /usr/local/lib/libxml2.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxml2.dylib
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+package configuration for libxml-2.0
+cflags: -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2
+ldflags: -L/usr/local/Cellar/libxml2/2.9.3/lib
+libs: -lxml2
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.3/lib   -arch x86_64 -arch i386   -lxml2 -lruby.2.0.0 -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  "
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: ignoring file /usr/local/lib/libxml2.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxml2.dylib
+ld: warning: ignoring file /usr/local/lib/libxslt.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxslt.dylib
+ld: warning: ignoring file /usr/local/lib/libiconv.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libiconv.dylib
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+package configuration for libxslt
+cflags: -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2
+ldflags: -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib
+libs: -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib   -arch x86_64 -arch i386   -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lruby.2.0.0 -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  "
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: ld: warning: ignoring file /usr/local/lib/libxslt.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxslt.dylibignoring file /usr/local/lib/libxml2.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxml2.dylib
+
+ld: warning: ignoring file /usr/local/lib/libiconv.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libiconv.dylib
+ld: warning: ignoring file /usr/local/lib/libexslt.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libexslt.dylib
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+package configuration for libexslt
+cflags: -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2
+ldflags: -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib
+libs: -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2
+
+"xcrun clang -E -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+/* end */
+
+"xcrun clang -E -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+4: #if LIBXML_VERSION < 20621
+5: #error libxml2 is older than 2.6.21
+6: #endif
+/* end */
+
+"xcrun clang -E -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <libxml/xmlversion.h>
+4: #if LIBXML_VERSION < 20903
+5: #error libxml2 is older than 2.9.3
+6: #endif
+/* end */
+
+have_func: checking for xmlParseDoc() in libxml/parser.h... -------------------- no
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib   -arch x86_64 -arch i386   -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lruby.2.0.0  -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  "
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: ld: warning: ignoring file /usr/local/lib/libxslt.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxslt.dylibignoring file /usr/local/lib/libxml2.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxml2.dylib
+
+ld: warning: ignoring file /usr/local/lib/libiconv.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libiconv.dylib
+ld: warning: ignoring file /usr/local/lib/libexslt.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libexslt.dylib
+Undefined symbols for architecture i386:
+  "_xmlParseDoc", referenced from:
+      _t in conftest-1fdfed.o
+ld: symbol(s) not found for architecture i386
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxml/parser.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+/* end */
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib   -arch x86_64 -arch i386   -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lruby.2.0.0  -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  "
+conftest.c:7:27: error: too few arguments to function call, single argument 'cur' was not specified
+int t(void) { xmlParseDoc(); return 0; }
+              ~~~~~~~~~~~ ^
+/usr/local/Cellar/libxml2/2.9.3/include/libxml2/libxml/parser.h:841:11: note: 'xmlParseDoc' declared here
+XMLPUBFUN xmlDocPtr XMLCALL
+          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxml/parser.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int t(void) { xmlParseDoc(); return 0; }
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+/* end */
+
+--------------------
+
+have_library: checking for xmlParseDoc() in -lxml2... -------------------- no
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib   -arch x86_64 -arch i386   -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lruby.2.0.0 -lxml2  -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  "
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: ld: warning: ignoring file /usr/local/lib/libxml2.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxml2.dylibignoring file /usr/local/lib/libxslt.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libxslt.dylib
+
+ld: warning: ignoring file /usr/local/lib/libiconv.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libiconv.dylib
+ld: warning: ignoring file /usr/local/lib/libexslt.dylib, file was built for x86_64 which is not the architecture being linked (i386): /usr/local/lib/libexslt.dylib
+Undefined symbols for architecture i386:
+  "_xmlParseDoc", referenced from:
+      _t in conftest-cdb4b9.o
+ld: symbol(s) not found for architecture i386
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxml/parser.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+/* end */
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib   -arch x86_64 -arch i386   -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lruby.2.0.0 -lxml2  -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  "
+conftest.c:7:27: error: too few arguments to function call, single argument 'cur' was not specified
+int t(void) { xmlParseDoc(); return 0; }
+              ~~~~~~~~~~~ ^
+/usr/local/Cellar/libxml2/2.9.3/include/libxml2/libxml/parser.h:841:11: note: 'xmlParseDoc' declared here
+XMLPUBFUN xmlDocPtr XMLCALL
+          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxml/parser.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int t(void) { xmlParseDoc(); return 0; }
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+/* end */
+
+--------------------
+
+have_library: checking for xmlParseDoc() in -llibxml2... -------------------- no
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib   -arch x86_64 -arch i386   -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lruby.2.0.0 -llibxml2  -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  "
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: warning: directory not found for option '-L/usr/local/Cellar/libxml2/2.9.2/lib'
+ld: library not found for -llibxml2
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxml/parser.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+/* end */
+
+"xcrun clang -o conftest -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/universal-darwin15 -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0/ruby/backward -I/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/include/ruby-2.0.0 -I. -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -g -Os -pipe -DHAVE_GCC_SYNC_BUILTINS  -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 -I/usr/local/Cellar/libxslt/1.1.28_1/include -I/usr/local/Cellar/libxml2/2.9.3/include/libxml2 conftest.c  -L. -L/System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib -L. -L/usr/local/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib -L/usr/local/Cellar/libxslt/1.1.28_1/lib -L/usr/local/Cellar/libxml2/2.9.2/lib -L/usr/local/Cellar/libxml2/2.9.3/lib   -arch x86_64 -arch i386   -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lruby.2.0.0 -llibxml2  -lxml2 -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lexslt -lxslt -lxml2 -lz -lpthread -liconv -lm -lxml2 -lpthread -ldl -lobjc  "
+conftest.c:7:27: error: too few arguments to function call, single argument 'cur' was not specified
+int t(void) { xmlParseDoc(); return 0; }
+              ~~~~~~~~~~~ ^
+/usr/local/Cellar/libxml2/2.9.3/include/libxml2/libxml/parser.h:841:11: note: 'xmlParseDoc' declared here
+XMLPUBFUN xmlDocPtr XMLCALL
+          ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxml/parser.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int t(void) { xmlParseDoc(); return 0; }
+ 8: int main(int argc, char **argv)
+ 9: {
+10:   if (argc > 1000000) {
+11:     printf("%p", &t);
+12:   }
+13: 
+14:   return 0;
+15: }
+/* end */
+
+--------------------
+
