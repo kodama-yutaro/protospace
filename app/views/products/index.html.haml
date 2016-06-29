@@ -5,16 +5,10 @@
   .container
     .row
       %ul.nav.nav-pills.col-lg-11
-        - if current_page?(products_popular_index_path)
-          %li.active{ role: "presentation" }
-            = link_to "Popular PROTO", products_popular_index_path
-          %li{ role: "presentation" }
-            = link_to "Newest PROTO", root_path
-        - else
-          %li{ role: "presentation" }
-            = link_to "Popular PROTO", products_popular_index_path
-          %li.active{ role: "presentation" }
-            = link_to "Newest PROTO", root_path
+        %li{ class: active?("products/popular"), role: "presentation" }
+          = link_to "Popular PROTO", products_popular_index_path
+        %li{ class: active?("products"), role: "presentation" }
+          = link_to "Newest PROTO", root_path
       = button_tag "View Tags", type: "button", class: "btn btn-default col-lg-1"
 = render partial: "products/product", locals: { products: @products }
 .text-center
