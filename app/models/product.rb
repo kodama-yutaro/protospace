@@ -3,7 +3,6 @@ class Product < ActiveRecord::Base
   has_many   :product_images
   has_many   :likes, dependent: :destroy
   accepts_nested_attributes_for :product_images
-  acts_as_taggable_on :products
   acts_as_taggable
 
   def like_user(user)
