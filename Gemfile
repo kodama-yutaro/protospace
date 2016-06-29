@@ -57,4 +57,4 @@ group :development do
   gem 'spring'
 end
 gem 'devise'
-
+gem 'acts-as-taggable-on', '~> 3.4'

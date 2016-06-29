@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.order("created_at DESC").includes(:user)
+    @products = Product.order("created_at DESC").includes(:user, :tags)
   end
 
   def new
@@ -53,7 +53,7 @@ class ProductsController < ApplicationController
       :concept,
       :catch_copy,
       product_images_attributes: [:image, :status, :id]
-    )
+    ).merge(tag_list: params[:product][:tag])
   end
 
   def set_product

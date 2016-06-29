@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :users , only: [:show, :edit, :update]
+
+  resources :tags, only: [:index, :show]
 end
