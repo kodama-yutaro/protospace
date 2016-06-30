@@ -35,10 +35,9 @@
     .col-md-3
       %h4 Tag List
       %ul.proto-tag-list.list-inline
-        %li
-          = link_to "iPad", "#", class: "btn btn-default"
-        %li
-          = link_to "writeframe", "#", class:"btn btn-default"
+        - @product.tags.each do |tag|
+          %li
+            =link_to "#{tag.name}", tag_path(tag.id), class: 'btn btn-default'
   #comments
     = render partial: 'comments/comment'
   - if user_signed_in?
