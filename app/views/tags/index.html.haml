@@ -1,4 +1,8 @@
-- @tags.each do |tag|
-  = link_to "#{tag.name}", tag_path(tag.id)
-    = link_to tag_path(tag.id) do
-      %i "#{tag.taggings.count}" Projects
+.container
+  .row.tag-list
+    %h2
+      Tags list
+    - @tags.each do |tag|
+      %ul
+        .col-md-4
+          = link_to "#{tag.name}", tag_path(tag.name), class: 'btn btn-defaults'
