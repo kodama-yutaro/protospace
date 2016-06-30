@@ -595,9 +595,29 @@ body {
   }
 }
 
-#like-button{
-  width: 110px;
-  height: 62px;
-  margin-right:10px;
-  float: right;
+.thumbnail {
+  position: relative;
+}
+
+
+button.btn.btn-default {
+  position: absolute;
+  z-index:100;
+  color: black;
+  margin-left: 10px;
+  margin-top:  10px;
+}
+
+.btn.btn-defaults{
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 3px;
+  color: #262626;
+  height: 57px;
+  line-height: 32px;
+  width: 367px;
+  list-style: none;
+  margin-bottom: 10px;
 }

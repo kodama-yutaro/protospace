@@ -9,7 +9,8 @@
           = link_to "Popular PROTO", products_popular_index_path
         %li{ class: active?("products"), role: "presentation" }
           = link_to "Newest PROTO", root_path
-      = button_tag "View Tags", type: "button", class: "btn btn-default col-lg-1"
+      = link_to tags_path do
+        = button_tag "View Tags", type: "button", class: "btn btn-default col-lg-1"
 = render partial: "products/product", locals: { products: @products }
 .text-center
   %ul.pagination
