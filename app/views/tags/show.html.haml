@@ -1,13 +1,2 @@
-.jumbotron
-  .container.text-center
-    = image_tag("header_logo.png", alt: "PROTO TYPE - SHARE THE PROTOTYPE", height: "73px")
-.filter-nav
-  .container
-    .row
-      %ul.nav.nav-pills.col-lg-11
-        %li{ class: active?("products/popular"), role: "presentation" }
-          = link_to "Popular PROTO", products_popular_index_path
-        %li{ class: active?("products"), role: "presentation" }
-          = link_to "Newest PROTO", root_path
-      = button_tag "View Tags", type: "button", class: "btn btn-default col-lg-1"
+= render partial: "layouts/navbar"
 = render partial: "products/product", locals: { products: @products }
