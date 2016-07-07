@@ -7,24 +7,18 @@
             = f.text_field :title, placeholder: "Title"
         .row
           .col-md-12
-            .cover-image-upload
+            .cover-image-upload{ id: "js-preview-images0" }
               = f.fields_for :product_images do |image_form|
-                = image_form.file_field :image
+                = image_form.file_field :image, class: 'img img-responstive'
                 = image_form.hidden_field :status, value: :main
           .col-md-12
             %ul.proto-sub-list.list-group
-              - 2.times do
+              - 3.times do |i|
                 %li.list-group-item.col-md-4
-                  .image-upload
+                  .image-upload{ id: "js-preview-images#{i+1}" }
                     = f.fields_for :product_images do |image_form|
                       = image_form.file_field :image
                       = image_form.hidden_field :status, value: :sub
-              %li.list-group-item.col-md-4
-                .image-upload-plus
-                  %span +
-                  = f.fields_for :product_images do |image_form|
-                    = image_form.file_field :image
-                    = image_form.hidden_field :status, value: :sub
       .row.proto-description
         .col-md-12
           = f.text_field :catch_copy, placeholder: "Catch Copy"

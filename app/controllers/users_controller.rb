@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update]
 
   def show
-    @products = @user.products.all
+    @products = @user.products.all.includes(:tags)
   end
 
   def edit
