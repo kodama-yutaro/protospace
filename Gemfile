@@ -59,3 +59,4 @@ end
 gem 'devise'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'jquery-turbolinks'
+gem 'kaminari'

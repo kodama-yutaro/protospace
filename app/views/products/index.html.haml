@@ -1,21 +1,4 @@
 = render partial: "layouts/navbar"
 = render partial: "products/product", locals: { products: @products }
 .text-center
-  %ul.pagination
-    %li.disabled
-      = link_to "#", aria: { label: "Previous" } do
-        %span{"aria-hidden" => "true"} «
-    %li.active
-      = link_to "1","#"
-      %span.sr-only (current)
-    %li
-      = link_to "2","#"
-    %li
-      = link_to "3","#"
-    %li
-      = link_to "4","#"
-    %li
-      = link_to "5","#"
-    %li
-      = link_to "#", aria: { label: "Next" } do
-        %span{ "aria-hidden" => "true" } »
+  = paginate(@products)

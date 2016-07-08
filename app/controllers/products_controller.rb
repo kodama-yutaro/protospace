@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   def index
-    @products = Product.order("created_at DESC").includes(:user, :tags)
+    @products = Product.order("created_at DESC").page(params[:page]).per(1).includes(:user, :tags)
   end
 
   def new
