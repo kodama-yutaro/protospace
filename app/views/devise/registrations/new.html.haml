@@ -8,7 +8,7 @@
           .user-name_image.row
             .user-name.col-md-10
               = f.text_field :nickname, placeholder: "Username"
-            .user-image.col-md-2
+            .user-image.col-md-2{ id: "js-user-image" }
               %button.btn.btn-primary Add image
               = f.file_field :avatar
           = f.email_field :email, placeholder: "E-Mail", class: "user-email"

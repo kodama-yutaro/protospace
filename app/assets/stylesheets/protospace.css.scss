@@ -599,6 +599,12 @@ body {
   position: relative;
 }
 
+#like-button{
+  width: 110px;
+  height: 62px;
+  margin-right:275px;
+  float: right;
+}
 
 button.btn.btn-default {
   position: absolute;
@@ -620,4 +626,42 @@ button.btn.btn-default {
   width: 367px;
   list-style: none;
   margin-bottom: 10px;
+}
+
+#js-preview-images0{
+  img{
+    height: 500px;
+    width:100%;
+  }
+}
+
+#js-preview-images1{
+  img{
+    height: 200px;
+    width:100%;
+  }
+}
+
+#js-preview-images2{
+  img{
+    height: 200px;
+    width:100%;
+  }
+}
+
+#js-preview-images3{
+  img{
+    height: 200px;
+    width:100%;
+  }
+}
+
+#js-user-image{
+  img{
+  height: 73px;
+  width: 73px;
+  border-radius: 50%;
+  position:relative;
+  right:16px;
+  }
 }
