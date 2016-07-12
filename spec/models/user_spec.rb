@@ -29,13 +29,13 @@ describe User do
      end
 
      it "is invalid without a password_confirmation" do
-      user = build(:user, password: "")
+      user = build(:user, password_confirmation: "")
       user.valid?
       expect(user.errors[:password]).to include("を入力してください。")
      end
 
      it "is invalid without a password_confirmation although with a password" do
-      user = build(:user, password: "0000000")
+      user = build(:user, ppassword_confirmation: "0000000")
       user.valid?
       expect(user.errors[:password]).to include("は8文字以上で入力してください。")
      end
