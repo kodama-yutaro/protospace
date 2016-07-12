@@ -9,7 +9,7 @@
           .col-md-12
             .cover-image-upload{ id: "js-preview-images0" }
               = f.fields_for :product_images do |image_form|
-                = image_form.file_field :image, class: 'img img-responstive'
+                = image_form.file_field :image
                 = image_form.hidden_field :status, value: :main
           .col-md-12
             %ul.proto-sub-list.list-group
