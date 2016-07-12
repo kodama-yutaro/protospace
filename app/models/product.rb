@@ -1,8 +1,8 @@
 class Product < ActiveRecord::Base
   belongs_to :user
-  has_many   :product_images, dependent: :destroy
-  has_many   :likes, dependent: :destroy
-  has_many   :comments, dependent: :destroy
+  has_many   :product_images, dependent: :delete_all
+  has_many   :likes, dependent: :delete_all
+  has_many   :comments, dependent: :delete_all
   accepts_nested_attributes_for :product_images
   acts_as_taggable
   validates :title, :catch_copy, :concept, :created_at, presence: true
