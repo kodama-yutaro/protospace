@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+  before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update]
 
   def show
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
     current_user.id == @user.id
     @user.update(update_params)
     sign_in(@user, bypass: true)
-    redirect_to user_path
+    redirect_to user_path, notice: 'ユーザー情報を更新しました。'
   end
 
   private
