@@ -62,7 +62,10 @@ group :development do
   gem "database_cleaner"
   gem "launchy"
   gem "poltergeist"
+  gem 'capybara-webkit'
+  gem 'selenium-webdriver'
 end
+
 gem 'devise'
 gem 'acts-as-taggable-on', '~> 3.4'
 gem 'jquery-turbolinks'
